@@ -1,0 +1,8 @@
+namespace AaronCodeLib
+{
+    class Graph
+    {
+
+
+    }
+}
