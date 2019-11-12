@@ -5,3 +5,4 @@ C:\Users\aaron\source\repos\AaronCodeLib\AaronCodeLib\bin\Debug\netcoreapp3.0\Aa
 C:\Users\aaron\source\repos\AaronCodeLib\AaronCodeLib\bin\Debug\netcoreapp3.0\AaronCodeLib.pdb
 C:\Users\aaron\source\repos\AaronCodeLib\AaronCodeLib\obj\Debug\netcoreapp3.0\AaronCodeLib.dll
 C:\Users\aaron\source\repos\AaronCodeLib\AaronCodeLib\obj\Debug\netcoreapp3.0\AaronCodeLib.pdb
+C:\Users\aaron\source\repos\AaronCodeLib\AaronCodeLib\obj\Debug\netcoreapp3.0\AaronCodeLib.csprojAssemblyReference.cache
