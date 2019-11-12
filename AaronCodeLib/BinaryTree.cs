@@ -4,16 +4,14 @@ namespace AaronCodeLib
     {
 
         public BinaryTreeNode<T> Root { set; get; }
-        public bool IsBalanced { set; get; }
         private BinaryTreeNode<T> CurrentNode { set; get; }
         private int _totalLeafsInCurrentLevel;
         private int _nextLeafNumber;
 
-        public BinaryTree(BinaryTreeNode<T> node, bool balanced = false)
+        public BinaryTree(BinaryTreeNode<T> node)
         {
             Root = node;
             CurrentNode = Root;
-            IsBalanced = balanced;
             _totalLeafsInCurrentLevel = 1;
             _nextLeafNumber = 1;
         }
@@ -31,7 +29,7 @@ namespace AaronCodeLib
             if (Root == null)
             {
                 Root = new BinaryTreeNode<T>(value);
-                CurrentNode = (BinaryTreeNode<T>)Root;
+                CurrentNode = Root;
             }
             else if (CurrentNode.Left == null)
                 CurrentNode.Left = new BinaryTreeNode<T>(value);
@@ -49,12 +47,7 @@ namespace AaronCodeLib
                     _nextLeafNumber++;
                 }
 
-                CurrentNode = GetNextLeafNode((BinaryTreeNode<T>)Root, _totalLeafsInCurrentLevel / 2);
-            }
-
-            if (IsBalanced)
-            {
-                //Balance the tree now that we've put the new value in
+                CurrentNode = GetNextLeafNode(Root, _totalLeafsInCurrentLevel / 2);
             }
         }
 
