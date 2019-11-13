@@ -76,9 +76,12 @@ namespace AaronCodeLib
 
         public void PreOrderTraversal(BinaryTreeNode<T> node)
         {
-            Traversed.Add(node.Value);
-            PreOrderTraversal(node.Left);
-            PreOrderTraversal(node.Right);
+            if (node != null)
+            {
+                Traversed.Add(node.Value);
+                PreOrderTraversal(node.Left);
+                PreOrderTraversal(node.Right);
+            }
         }
 
         private void PostOrderTraversal(BinaryTreeNode<T> node)
