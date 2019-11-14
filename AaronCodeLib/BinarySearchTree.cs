@@ -1,15 +1,17 @@
 using System;
+using System.Collections.Generic;
 
 namespace AaronCodeLib
 {
     public class BinarySearchTree<T> where T : IComparable<T>
     {
-
         public BinaryTreeNode<T> Root { set; get; }
+        private List<T> Traversed { set; get; }
 
         public BinarySearchTree(BinaryTreeNode<T> node)
         {
             Root = node;
+            Traversed = new List<T>();
         }
 
         public BinarySearchTree(T value) : this(new BinaryTreeNode<T>(value))
@@ -46,5 +48,52 @@ namespace AaronCodeLib
                     node.Right = new BinaryTreeNode<T>(val);
             }
         }
+
+        public List<T> Traverse(Traversal traversalType = Traversal.InOrder)
+        {
+            Traversed = new List<T>();
+
+            switch (traversalType)
+            {
+                case Traversal.PreOrder:
+                {
+                    PreOrderTraversal(Root);
+                    return Traversed;
+                }
+                case Traversal.InOrder:
+                {
+                    InOrderTraversal(Root);
+                    return Traversed;
+                }
+                case Traversal.PostOrder:
+                {
+                    PostOrderTraversal(Root);
+                    return Traversed;
+                }
+            }
+            return new List<T>();
+        }
+
+        public void PreOrderTraversal(BinaryTreeNode<T> node)
+        {
+            if (node != null)
+            {
+                Traversed.Add(node.Value);
+                PreOrderTraversal(node.Left);
+                PreOrderTraversal(node.Right);
+            }
+        }
+
+        private void PostOrderTraversal(BinaryTreeNode<T> node)
+        {
+            throw new NotImplementedException();
+        }
+
+        private void InOrderTraversal(BinaryTreeNode<T> node)
+        {
+            throw new NotImplementedException();
+        }
+
+
     }
 }
