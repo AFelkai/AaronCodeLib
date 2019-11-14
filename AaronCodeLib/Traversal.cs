@@ -1,8 +1,9 @@
-﻿using System;
-
-public enum Traversal
+﻿namespace AaronCodeLib
 {
-	PreOrder,
-    InOrder,
-    PostOrder
+    public enum Traversal
+    {
+        PreOrder,
+        InOrder,
+        PostOrder
+    }
 }

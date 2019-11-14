@@ -29,6 +29,11 @@ namespace Testing
             binarySearchTree.Insert(.4282);
 
             Console.WriteLine(binarySearchTree.Root.Right.Left.Left.Value); //Should return 92
+
+            foreach (var item in binarySearchTree.Traverse(Traversal.PreOrder))
+            {
+                Console.WriteLine(item); //Should return 4, 3.9, .4282, 1029, 408.42, 92, 87
+            }
         }
     }
 }

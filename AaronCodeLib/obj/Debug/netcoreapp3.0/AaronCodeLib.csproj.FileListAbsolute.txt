@@ -1,8 +1,0 @@
-C:\Users\aaron\source\repos\AaronCodeLib\AaronCodeLib\obj\Debug\netcoreapp3.0\AaronCodeLib.AssemblyInfoInputs.cache
-C:\Users\aaron\source\repos\AaronCodeLib\AaronCodeLib\obj\Debug\netcoreapp3.0\AaronCodeLib.AssemblyInfo.cs
-C:\Users\aaron\source\repos\AaronCodeLib\AaronCodeLib\bin\Debug\netcoreapp3.0\AaronCodeLib.deps.json
-C:\Users\aaron\source\repos\AaronCodeLib\AaronCodeLib\bin\Debug\netcoreapp3.0\AaronCodeLib.dll
-C:\Users\aaron\source\repos\AaronCodeLib\AaronCodeLib\bin\Debug\netcoreapp3.0\AaronCodeLib.pdb
-C:\Users\aaron\source\repos\AaronCodeLib\AaronCodeLib\obj\Debug\netcoreapp3.0\AaronCodeLib.dll
-C:\Users\aaron\source\repos\AaronCodeLib\AaronCodeLib\obj\Debug\netcoreapp3.0\AaronCodeLib.pdb
-C:\Users\aaron\source\repos\AaronCodeLib\AaronCodeLib\obj\Debug\netcoreapp3.0\AaronCodeLib.csprojAssemblyReference.cache
