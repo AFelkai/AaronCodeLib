@@ -28,21 +28,28 @@ namespace Testing
             binarySearchTree.Insert(3.9);
             binarySearchTree.Insert(87);
             binarySearchTree.Insert(.4282);
+            binarySearchTree.Insert(2000);
+            binarySearchTree.Insert(3.95);
 
             Console.WriteLine(binarySearchTree.Root.Right.Left.Left.Value); //Should return 92
             Console.WriteLine();
 
             foreach (var item in binarySearchTree.Traverse(Traversal.PreOrder))
             {
-                Console.WriteLine(item); //Should return 4, 3.9, .4282, 1029, 408.42, 92, 87
+                Console.WriteLine(item); //Should return 4, 3.9, .4282, 3.5, 1029, 408.42, 92, 87, 2000
             }
             Console.WriteLine();
 
             foreach (var item in binarySearchTree.Traverse(Traversal.InOrder))
             {
-                Console.WriteLine(item); //Should return .4282, 3.9, 4, 87, 92, 408.42, 1029
+                Console.WriteLine(item); //Should return .4282, 3.9, 3.95, 4, 87, 92, 408.42, 1029, 2000
             }
             Console.WriteLine();
+
+            foreach (var item in binarySearchTree.Traverse(Traversal.PostOrder))
+            {
+                Console.WriteLine(item); //Should return .4282, 3.95, 3.9, 87, 92, 408.42, 2000, 1029, 4
+            }
         }
     }
 }
