@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\aaron\\source\\repos\\AaronCodeLib\\AaronCodeLib\\AaronCodeLib.csproj",
+      "projectUniqueName": "C:\\Users\\aaron\\Source\\Repos\\AFelkai\\AaronCodeLib\\AaronCodeLib\\AaronCodeLib.csproj",
       "projectName": "AaronCodeLib",
-      "projectPath": "C:\\Users\\aaron\\source\\repos\\AaronCodeLib\\AaronCodeLib\\AaronCodeLib.csproj",
+      "projectPath": "C:\\Users\\aaron\\Source\\Repos\\AFelkai\\AaronCodeLib\\AaronCodeLib\\AaronCodeLib.csproj",
       "packagesPath": "C:\\Users\\aaron\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\aaron\\source\\repos\\AaronCodeLib\\AaronCodeLib\\obj\\",
+      "outputPath": "C:\\Users\\aaron\\Source\\Repos\\AFelkai\\AaronCodeLib\\AaronCodeLib\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\aaron\\AppData\\Roaming\\NuGet\\NuGet.Config",

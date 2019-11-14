@@ -1,6 +1,6 @@
-﻿using System;
+﻿//using System;
 
-public Exception WrongTypeException
-{
-	
-}
+//public Exception WrongTypeException : Exception
+//{
+
+//}

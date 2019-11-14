@@ -74,7 +74,7 @@ namespace AaronCodeLib
             return new List<T>();
         }
 
-        public void PreOrderTraversal(BinaryTreeNode<T> node)
+        private void PreOrderTraversal(BinaryTreeNode<T> node)
         {
             if (node != null)
             {
