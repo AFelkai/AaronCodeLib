@@ -18,6 +18,7 @@ namespace Testing
 
 
             Console.WriteLine(binaryTree.Root.Right.Left.Value); //Should return 6
+            Console.WriteLine();
 
             var binarySearchTree = new BinarySearchTree<double>(4);
 
@@ -29,11 +30,19 @@ namespace Testing
             binarySearchTree.Insert(.4282);
 
             Console.WriteLine(binarySearchTree.Root.Right.Left.Left.Value); //Should return 92
+            Console.WriteLine();
 
             foreach (var item in binarySearchTree.Traverse(Traversal.PreOrder))
             {
                 Console.WriteLine(item); //Should return 4, 3.9, .4282, 1029, 408.42, 92, 87
             }
+            Console.WriteLine();
+
+            foreach (var item in binarySearchTree.Traverse(Traversal.InOrder))
+            {
+                Console.WriteLine(item); //Should return .4282, 3.9, 4, 87, 92, 408.42, 1029
+            }
+            Console.WriteLine();
         }
     }
 }

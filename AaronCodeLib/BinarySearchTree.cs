@@ -56,20 +56,20 @@ namespace AaronCodeLib
             switch (traversalType)
             {
                 case Traversal.PreOrder:
-                {
-                    PreOrderTraversal(Root);
-                    return Traversed;
-                }
+                    {
+                        PreOrderTraversal(Root);
+                        return Traversed;
+                    }
                 case Traversal.InOrder:
-                {
-                    InOrderTraversal(Root);
-                    return Traversed;
-                }
+                    {
+                        InOrderTraversal(Root);
+                        return Traversed;
+                    }
                 case Traversal.PostOrder:
-                {
-                    PostOrderTraversal(Root);
-                    return Traversed;
-                }
+                    {
+                        PostOrderTraversal(Root);
+                        return Traversed;
+                    }
             }
             return new List<T>();
         }
@@ -91,9 +91,13 @@ namespace AaronCodeLib
 
         private void InOrderTraversal(BinaryTreeNode<T> node)
         {
-            throw new NotImplementedException();
+            if (node != null)
+            {
+                InOrderTraversal(node.Left);
+                Traversed.Add(node.Value);
+                InOrderTraversal(node.Right);
+            }
         }
-
 
     }
 }
