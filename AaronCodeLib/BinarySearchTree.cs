@@ -84,11 +84,6 @@ namespace AaronCodeLib
             }
         }
 
-        private void PostOrderTraversal(BinaryTreeNode<T> node)
-        {
-            throw new NotImplementedException();
-        }
-
         private void InOrderTraversal(BinaryTreeNode<T> node)
         {
             if (node != null)
@@ -99,5 +94,14 @@ namespace AaronCodeLib
             }
         }
 
+        private void PostOrderTraversal(BinaryTreeNode<T> node)
+        {
+            if (node != null)
+            {
+                PostOrderTraversal(node.Left);
+                PostOrderTraversal(node.Right);
+                Traversed.Add(node.Value);
+            }
+        }
     }
 }
