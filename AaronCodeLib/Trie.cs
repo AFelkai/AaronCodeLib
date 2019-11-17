@@ -1,21 +1,43 @@
+using System.Collections.Generic;
+using System.ComponentModel.Design.Serialization;
+using System.Linq;
+using System.Net.Sockets;
+using System.Runtime.CompilerServices;
+
 namespace AaronCodeLib
 {
     public class Trie : ITree<char>
     {
 
-        public INode<char> Root { set; get; }
-        public bool IsLeaf { set; get; }
+        private TrieNode<char> Root { set; get; }
 
-        Trie()
+        public Trie()
         {
-
-            Root = new TreeNode<char>();
-            IsLeaf = true;
+            Root = new TrieNode<char>();
         }
 
-        void AddWord(string word)
+        public void Insert(string word)
+        { 
+            AddWord(word, Root);
+        }
+
+        private TrieNode<char> AddWord(string word, TrieNode<char> node)
         {
-            //Root.Value
+            var item = node.Children.FirstOrDefault(child => child.Value == word.FirstOrDefault());
+
+            if (item != null && word != "")
+            {
+                return AddWord(word.Substring(1), item);
+            }
+
+            foreach (char c in word)
+            {
+                node.Children.Add(new TrieNode<char>(c));
+                node = node.Children.First(child => child.Value == c);
+            }
+
+            node.EndOfWord = true;
+            return node;
         }
     }
 }

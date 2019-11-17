@@ -7,6 +7,7 @@ namespace AaronCodeLib
 
         public T Value { set; get; }
         public List<INode<T>> Children { set; get; }
+        public bool IsLeaf { get; set; }
 
         public TreeNode()
         {
@@ -15,6 +16,8 @@ namespace AaronCodeLib
         public TreeNode(T value)
         {
             Value = value;
+            Children = new List<INode<T>>();
+                IsLeaf = true;
         }
 
     }
