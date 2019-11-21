@@ -9,7 +9,7 @@ namespace AaronCodeLib
     public class Trie : ITree<char>
     {
 
-        private TrieNode<char> Root { set; get; }
+        private TrieNode<char> Root { get; }
 
         public Trie()
         {
@@ -17,7 +17,7 @@ namespace AaronCodeLib
         }
 
         public void Insert(string word)
-        { 
+        {
             AddWord(word, Root);
         }
 
@@ -38,6 +38,20 @@ namespace AaronCodeLib
 
             node.EndOfWord = true;
             return node;
+        }
+
+        public bool FindWord(string word)
+        {
+            var node = Root;
+            foreach (char c in word)
+            {
+                if (node.Children.FirstOrDefault(child => child.Value == c) != null)
+                    node = node.Children.First(child => child.Value == c);
+                else 
+                    return false;
+            }
+
+            return node.EndOfWord;
         }
     }
 }
