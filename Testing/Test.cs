@@ -57,6 +57,12 @@ namespace Testing
             trie.Insert("cod");
             trie.Insert("hello");
             trie.Insert("hell");
+
+            Console.WriteLine();
+            Console.WriteLine(trie.FindWord("hell")); //Should return True
+            Console.WriteLine(trie.FindWord("he")); //Should return False
+            Console.WriteLine(trie.FindWord("coo")); //Should return False
+            Console.WriteLine(trie.FindWord("cool")); //Should return True
         }
     }
 }

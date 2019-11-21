@@ -17,7 +17,7 @@ namespace AaronCodeLib
         {
             Value = value;
             Children = new List<INode<T>>();
-                IsLeaf = true;
+            IsLeaf = true;
         }
 
     }
