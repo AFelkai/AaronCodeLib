@@ -27,15 +27,15 @@ namespace AaronCodeLib
             if (Root == null) //If it's the first node in the tree
                 Root = new BinaryTreeNode<T>(val);
             else
-                InsertAtProperSpot(val, Root);
+                Insert(val, Root);
         }
 
-        private void InsertAtProperSpot(T val, BinaryTreeNode<T> node)
+        private static void Insert(T val, BinaryTreeNode<T> node)
         {
             if (node.Value.CompareTo(val) >= 0) //If value is less than or equal to current node
             {
                 if (node.Left != null)
-                    InsertAtProperSpot(val, node.Left);
+                    Insert(val, node.Left);
                 else
                     node.Left = new BinaryTreeNode<T>(val);
             }
@@ -43,10 +43,32 @@ namespace AaronCodeLib
             else
             {
                 if (node.Right != null)
-                    InsertAtProperSpot(val, node.Right);
+                    Insert(val, node.Right);
                 else
                     node.Right = new BinaryTreeNode<T>(val);
             }
+        }
+
+        public bool Exists(T val)
+        {
+            return Exists(val, Root);
+        }
+
+        private bool Exists(T val, BinaryTreeNode<T> node)
+        {
+            if (val.CompareTo(node.Value) == 0)
+                return true;
+            if (val.CompareTo(node.Value) < 0)
+            {
+                if (node.Left != null)
+                    return Exists(val, node.Left);
+                return false;
+            }
+
+            if (node.Right != null) //Else
+                return Exists(val, node.Right);
+            return false;
+
         }
 
         public List<T> Traverse(Traversal traversalType = Traversal.InOrder)
