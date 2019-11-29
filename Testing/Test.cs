@@ -51,6 +51,9 @@ namespace Testing
                 Console.WriteLine(item); //Should return .4282, 3.95, 3.9, 87, 92, 408.42, 2000, 1029, 4
             }
 
+            Console.WriteLine(binarySearchTree.Exists(100));
+            Console.WriteLine(binarySearchTree.Exists(87));
+
             var trie = new Trie();
 
             trie.Insert("cool");
