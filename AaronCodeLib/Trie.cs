@@ -11,9 +11,14 @@ namespace AaronCodeLib
 
         private TrieNode<char> Root { get; }
 
-        public Trie()
+        public Trie() : this(new TrieNode<char>())
         {
-            Root = new TrieNode<char>();
+
+        }
+
+        public Trie(TrieNode<char> node)
+        {
+            Root = node; 
         }
 
         public void Insert(string word)
